@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order tracker</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="container">
+        <h1>Shagalinku Restaurant </h1><span><h3>Order Tracker</h3></span>
+        <div class="row">
+          <div class="col-md-6">
+            <form id="orderForm">
+              <div class="form-group">
+                <label for="kindOfFood">Kind of Food:</label>
+                <input type="text" class="form-control" id="kindOfFood" required>
+              </div>
+              <div class="form-group">
+                <label for="numOfPlates">Number of Plates:</label>
+                <input type="number" class="form-control" id="numOfPlates" min="1" required>
+              </div>
+              <div class="form-group">
+                <label for="tableNumber">Table Number:</label>
+                <input type="text" class="form-control" id="tableNumber" required>
+              </div>
+              <div class="form-group">
+                <label for="dateTime">Date and Time:</label>
+                <input type="datetime-local" class="form-control" id="dateTime" required>
+              </div>
+              <div class="form-group">
+                <label for="amount">Amount per Plate:</label>
+                <input type="number" class="form-control" id="amount" step="0.01" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Place Order</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h3>Order Details</h3>
+            <table class="table table-striped" id="orderTable">
+              <thead>
+                <tr>
+                  <th>Kind of Food</th>
+                  <th>Number of Plates</th>
+                  <th>Table Number</th>
+                  <th>Date and Time</th>
+                  <th>Amount per Plate</th>
+                  <th>Total Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Order details will be dynamically added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
